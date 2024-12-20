@@ -36,7 +36,7 @@ export default function ClientSide() {
           {Loading && <Loadingg/>}
       {!Loading && <div className='flex flex-col gap-10 px-10 '>
         <h1 className='text-[24px] font-bold m-auto'>Client Side Data Fetching</h1>
-        <div className='grid grid-cols-3 gap-4 justify-items-center'>
+        <div className='grid  gap-4 justify-items-center  1400:grid-cols-3 md:grid-cols-2 grid-cols-1  pb-[140px] border-b-[1px] border-solid'>
           {products?.map((elements, index)=>{
             return(
               <Link href={`/productdetail/${elements.id}`} key={index}>
