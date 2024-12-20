@@ -15,7 +15,12 @@ interface Products{
        count:number
       }
   }
-export default function page({params:{id}}:any) {
+  interface PageProps {
+    params: {
+      id: number;
+    };
+  }
+export default function page({params:{id}}:PageProps) {
       const[Loading, setLoading]= useState(true)
           const[products, setProducts]= useState<Products>()
           useEffect(()=>{

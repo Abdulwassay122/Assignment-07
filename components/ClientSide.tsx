@@ -18,10 +18,9 @@ interface Products{
 export default function ClientSide() {
     const[Loading, setLoading]= useState(true)
     const[products, setProducts]= useState<Products[]>()
-    const[country, setCountry]= useState<string>('pakistan')
     useEffect(()=>{
       fetchApi()
-    },[country])
+    },[])
 
     const fetchApi = async ()=>{
       setLoading(true)
@@ -29,11 +28,6 @@ export default function ClientSide() {
       const parsedData : Products[] = await data.json()
       setProducts(parsedData)
       setLoading(false)
-    }
-
-    function search(){
-      let element  = document.getElementById('input') as HTMLInputElement
-      setCountry(element.value)
     }
 
   return (

@@ -9,7 +9,7 @@ interface Books{
 
 const ServerSide = async () => {
     let parsedData : Books[] = []
-        let data = await fetch('https://simple-books-api.glitch.me/books/')
+        const data = await fetch('https://simple-books-api.glitch.me/books/')
         parsedData = await data.json()
         console.log(parsedData)
 
