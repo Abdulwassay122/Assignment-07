@@ -20,7 +20,7 @@ interface Products{
       id: number;
     };
   }
-export default function page({params:{id}}:PageProps) {
+export default function Page({params:{id}}:PageProps) {
       const[Loading, setLoading]= useState(true)
           const[products, setProducts]= useState<Products>()
           useEffect(()=>{
