@@ -19,7 +19,7 @@ const ServerSide = async () => {
         <div className='grid 1400:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 pb-[140px]  '>
       {parsedData.map((elements, index)=>{
           return(
-              <div key={index} className='bg-[#fcefb9] p-4 flex flex-col gap-4 m-4 w-[350px] rounded-lg'>
+              <div key={index} className='bg-[#fcefb9] p-4 flex flex-col hover:scale-95 transition-transform duration-100 gap-4 m-4 w-[350px] rounded-lg'>
                   <h2 className='text-[20px] font-semibold'>Name: {elements.name}</h2>
                   <p className='text-[16px]'>Type: {elements.type}</p>
                   <p className={`text-[14px] ${!elements.available?'text-red-500':'text-green-400'}`}>{elements.available ? 'Available':'Not Available'}</p>

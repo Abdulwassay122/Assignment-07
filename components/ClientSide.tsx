@@ -36,13 +36,13 @@ export default function ClientSide() {
           {Loading && <Loadingg/>}
       {!Loading && <div className='flex flex-col gap-10 px-10 '>
         <h1 className='text-[24px] font-bold m-auto'>Client Side Data Fetching</h1>
-        <div className='grid  gap-4 justify-items-center  1400:grid-cols-3 md:grid-cols-2 grid-cols-1  pb-[140px] border-b-[1px] border-solid'>
+        <div className='grid  gap-4 justify-items-center  1400:grid-cols-3 md:grid-cols-2 grid-cols-1  pb-[140px]'>
           {products?.map((elements, index)=>{
             return(
               <Link href={`/productdetail/${elements.id}`} key={index}>
                 <div className='w-[348px] h-[533px] bg-white rounded-[5px] group'>
                   <div className='w-[348px] h-[348px] p-4'>
-                    <img className='w-[348px] h-[348px] group-hover:scale-105 transition-transform duration-300  rounded-[5px]' src={elements.image} alt="" />
+                    <img className='w-[348px] h-[348px] group-hover:scale-95 transition-transform duration-300  rounded-[5px]' src={elements.image} alt="" />
                   </div>
                   <div className='pt-4 pb-[42px] flex flex-col gap-5 pl-3'>
                     <div>
