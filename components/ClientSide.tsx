@@ -40,9 +40,9 @@ export default function ClientSide() {
           {products?.map((elements, index)=>{
             return(
               <Link href={`/productdetail/${elements.id}`} key={index}>
-                <div className='w-[348px] h-[533px] bg-white rounded-[5px]'>
+                <div className='w-[348px] h-[533px] bg-white rounded-[5px] group'>
                   <div className='w-[348px] h-[348px] p-4'>
-                    <img className='w-[348px] h-[348px]  rounded-[5px]' src={elements.image} alt="" />
+                    <img className='w-[348px] h-[348px] group-hover:scale-105 transition-transform duration-300  rounded-[5px]' src={elements.image} alt="" />
                   </div>
                   <div className='pt-4 pb-[42px] flex flex-col gap-5 pl-3'>
                     <div>
